@@ -296,6 +296,13 @@ public class UIMain extends javax.swing.JFrame
       scrollBarBrowse.setForeground(new java.awt.Color(204, 255, 255));
 
       returnHomeBrowseButton.setText("Return Home");
+      returnHomeBrowseButton.addActionListener(new java.awt.event.ActionListener()
+      {
+         public void actionPerformed(java.awt.event.ActionEvent evt)
+         {
+            returnHomeBrowseButtonActionPerformed(evt);
+         }
+      });
 
       javax.swing.GroupLayout panelBrowseLayout = new javax.swing.GroupLayout(panelBrowse);
       panelBrowse.setLayout(panelBrowseLayout);
@@ -386,6 +393,13 @@ public class UIMain extends javax.swing.JFrame
       changePasswordAcctButton.setToolTipText("");
 
       returnHomeAcctButton.setText("Return Home");
+      returnHomeAcctButton.addActionListener(new java.awt.event.ActionListener()
+      {
+         public void actionPerformed(java.awt.event.ActionEvent evt)
+         {
+            returnHomeAcctButtonActionPerformed(evt);
+         }
+      });
 
       headerAcctLbl.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
       headerAcctLbl.setText("My Account");
@@ -588,8 +602,18 @@ public class UIMain extends javax.swing.JFrame
 
    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginButtonActionPerformed
    {//GEN-HEADEREND:event_loginButtonActionPerformed
-      // TODO add your handling code here:
+      tabMain.setSelectedIndex(1);
    }//GEN-LAST:event_loginButtonActionPerformed
+
+   private void returnHomeBrowseButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_returnHomeBrowseButtonActionPerformed
+   {//GEN-HEADEREND:event_returnHomeBrowseButtonActionPerformed
+      tabMain.setSelectedIndex(1);
+   }//GEN-LAST:event_returnHomeBrowseButtonActionPerformed
+
+   private void returnHomeAcctButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_returnHomeAcctButtonActionPerformed
+   {//GEN-HEADEREND:event_returnHomeAcctButtonActionPerformed
+      tabMain.setSelectedIndex(1);
+   }//GEN-LAST:event_returnHomeAcctButtonActionPerformed
 
    /**
     @param args the command line arguments

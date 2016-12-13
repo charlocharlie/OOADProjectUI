@@ -520,6 +520,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Return Home"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="returnHomeBrowseButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -699,6 +702,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Return Home"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="returnHomeAcctButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="headerAcctLbl">
               <Properties>
