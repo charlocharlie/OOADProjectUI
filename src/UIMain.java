@@ -94,6 +94,10 @@ public class UIMain extends javax.swing.JFrame
       jButton2 = new javax.swing.JButton();
       jButton3 = new javax.swing.JButton();
       panelNotifications = new javax.swing.JPanel();
+      jScrollPane7 = new javax.swing.JScrollPane();
+      jList6 = new javax.swing.JList<>();
+      jButton5 = new javax.swing.JButton();
+      jButton6 = new javax.swing.JButton();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
       setTitle("Movie Rental System");
@@ -573,15 +577,50 @@ public class UIMain extends javax.swing.JFrame
 
       tabMain.addTab("Cart", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_shopping-cart_16_0_000000_none.png")), panelCart, ""); // NOI18N
 
+      jList6.setModel(new javax.swing.AbstractListModel<String>()
+      {
+         String[] strings = { "ALERT: item ELF has been checked out for 57 days!", "DEAL: Get 25% off when you rent 5 or more items!" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      jScrollPane7.setViewportView(jList6);
+
+      jButton5.setText("Clear Selected");
+
+      jButton6.setText("Clear All");
+      jButton6.addActionListener(new java.awt.event.ActionListener()
+      {
+         public void actionPerformed(java.awt.event.ActionEvent evt)
+         {
+            jButton6ActionPerformed(evt);
+         }
+      });
+
       javax.swing.GroupLayout panelNotificationsLayout = new javax.swing.GroupLayout(panelNotifications);
       panelNotifications.setLayout(panelNotificationsLayout);
       panelNotificationsLayout.setHorizontalGroup(
          panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGroup(panelNotificationsLayout.createSequentialGroup()
+            .addContainerGap()
+            .addGroup(panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+               .addGroup(panelNotificationsLayout.createSequentialGroup()
+                  .addComponent(jButton5)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                  .addComponent(jButton6)
+                  .addGap(0, 0, Short.MAX_VALUE)))
+            .addContainerGap())
       );
       panelNotificationsLayout.setVerticalGroup(
          panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 454, Short.MAX_VALUE)
+         .addGroup(panelNotificationsLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(jButton5)
+               .addComponent(jButton6))
+            .addContainerGap(209, Short.MAX_VALUE))
       );
 
       tabMain.addTab("Notifications", new javax.swing.ImageIcon(getClass().getResource("/ionicons_2-0-1_android-notifications_16_0_000000_none.png")), panelNotifications); // NOI18N
@@ -614,6 +653,12 @@ public class UIMain extends javax.swing.JFrame
    {//GEN-HEADEREND:event_returnHomeAcctButtonActionPerformed
       tabMain.setSelectedIndex(1);
    }//GEN-LAST:event_returnHomeAcctButtonActionPerformed
+
+   private void jButton6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton6ActionPerformed
+   {//GEN-HEADEREND:event_jButton6ActionPerformed
+      jList6.removeAll();
+      jList6.updateUI();
+   }//GEN-LAST:event_jButton6ActionPerformed
 
    /**
     @param args the command line arguments
@@ -681,6 +726,8 @@ public class UIMain extends javax.swing.JFrame
    private javax.swing.JButton jButton2;
    private javax.swing.JButton jButton3;
    private javax.swing.JButton jButton4;
+   private javax.swing.JButton jButton5;
+   private javax.swing.JButton jButton6;
    private javax.swing.JLabel jLabel1;
    private javax.swing.JLabel jLabel10;
    private javax.swing.JLabel jLabel2;
@@ -696,12 +743,14 @@ public class UIMain extends javax.swing.JFrame
    private javax.swing.JList<String> jList3;
    private javax.swing.JList<String> jList4;
    private javax.swing.JList<String> jList5;
+   private javax.swing.JList<String> jList6;
    private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JScrollPane jScrollPane2;
    private javax.swing.JScrollPane jScrollPane3;
    private javax.swing.JScrollPane jScrollPane4;
    private javax.swing.JScrollPane jScrollPane5;
    private javax.swing.JScrollPane jScrollPane6;
+   private javax.swing.JScrollPane jScrollPane7;
    private javax.swing.JTextArea jTextArea1;
    private javax.swing.JButton loginButton;
    private javax.swing.JLabel logoImg;
