@@ -37,9 +37,26 @@ public class UIMain extends javax.swing.JFrame
       passwordLbl = new javax.swing.JLabel();
       usernameTxtFld = new javax.swing.JTextField();
       passwordTxtFld = new javax.swing.JTextField();
+      createAcctButton = new javax.swing.JButton();
+      loginButton = new javax.swing.JButton();
       panelHome = new javax.swing.JPanel();
+      homeLogoImg = new javax.swing.JLabel();
       panelBrowse = new javax.swing.JPanel();
       panelAccount = new javax.swing.JPanel();
+      guzmerAcctImg = new javax.swing.JLabel();
+      changeImgButton = new javax.swing.JButton();
+      usernameAcctLbl = new javax.swing.JLabel();
+      passwordAcctLbl = new javax.swing.JLabel();
+      accountIdLbl = new javax.swing.JLabel();
+      nameAcctLbl = new javax.swing.JLabel();
+      nameAcctLbl1 = new javax.swing.JLabel();
+      usernameAcctLbl1 = new javax.swing.JLabel();
+      passwordAcctLbl1 = new javax.swing.JLabel();
+      accountIdLbl1 = new javax.swing.JLabel();
+      changeUsernameAcctButton = new javax.swing.JButton();
+      changeNameAcctButton1 = new javax.swing.JButton();
+      changePasswordAcctButton = new javax.swing.JButton();
+      returnHomeAcctButton = new javax.swing.JButton();
       panelCart = new javax.swing.JPanel();
       panelNotifications = new javax.swing.JPanel();
 
@@ -64,6 +81,17 @@ public class UIMain extends javax.swing.JFrame
       passwordLbl.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
       passwordLbl.setText("Password:");
 
+      createAcctButton.setText("Create Account");
+
+      loginButton.setText("Login");
+      loginButton.addActionListener(new java.awt.event.ActionListener()
+      {
+         public void actionPerformed(java.awt.event.ActionEvent evt)
+         {
+            loginButtonActionPerformed(evt);
+         }
+      });
+
       javax.swing.GroupLayout panelLoginLayout = new javax.swing.GroupLayout(panelLogin);
       panelLogin.setLayout(panelLoginLayout);
       panelLoginLayout.setHorizontalGroup(
@@ -72,18 +100,21 @@ public class UIMain extends javax.swing.JFrame
             .addGap(112, 112, 112)
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addComponent(passwordLbl)
-               .addComponent(usernameLbl))
-            .addGap(22, 22, 22)
+               .addComponent(usernameLbl)
+               .addComponent(createAcctButton))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(panelLoginLayout.createSequentialGroup()
                   .addComponent(logoImg)
                   .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                   .addComponent(jLabel2))
                .addGroup(panelLoginLayout.createSequentialGroup()
-                  .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                     .addComponent(usernameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                     .addComponent(passwordTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                  .addGap(0, 151, Short.MAX_VALUE))))
+                  .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                     .addComponent(loginButton)
+                     .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(usernameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(passwordTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                  .addGap(0, 146, Short.MAX_VALUE))))
       );
       panelLoginLayout.setVerticalGroup(
          panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,11 +122,12 @@ public class UIMain extends javax.swing.JFrame
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(panelLoginLayout.createSequentialGroup()
                   .addGap(100, 100, 100)
-                  .addComponent(jLabel2))
-               .addGroup(panelLoginLayout.createSequentialGroup()
-                  .addGap(77, 77, 77)
-                  .addComponent(logoImg)))
-            .addGap(48, 48, 48)
+                  .addComponent(jLabel2)
+                  .addGap(175, 175, 175))
+               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginLayout.createSequentialGroup()
+                  .addContainerGap()
+                  .addComponent(logoImg)
+                  .addGap(61, 61, 61)))
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(usernameLbl)
                .addComponent(usernameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -103,20 +135,32 @@ public class UIMain extends javax.swing.JFrame
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(passwordLbl)
                .addComponent(passwordTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addContainerGap(109, Short.MAX_VALUE))
+            .addGap(32, 32, 32)
+            .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(createAcctButton)
+               .addComponent(loginButton))
+            .addContainerGap(45, Short.MAX_VALUE))
       );
 
       tabMain.addTab("Login", panelLogin);
+
+      homeLogoImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoSmall.png"))); // NOI18N
 
       javax.swing.GroupLayout panelHomeLayout = new javax.swing.GroupLayout(panelHome);
       panelHome.setLayout(panelHomeLayout);
       panelHomeLayout.setHorizontalGroup(
          panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGroup(panelHomeLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(homeLogoImg)
+            .addContainerGap(532, Short.MAX_VALUE))
       );
       panelHomeLayout.setVerticalGroup(
          panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 454, Short.MAX_VALUE)
+         .addGroup(panelHomeLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(homeLogoImg)
+            .addContainerGap(348, Short.MAX_VALUE))
       );
 
       tabMain.addTab("Home ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_home_64_0_000000_none.png")), panelHome); // NOI18N
@@ -134,15 +178,103 @@ public class UIMain extends javax.swing.JFrame
 
       tabMain.addTab("Browse ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_list-ul_16_0_000000_none.png")), panelBrowse); // NOI18N
 
+      guzmerAcctImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guzmer.png"))); // NOI18N
+
+      changeImgButton.setText("Change Image");
+
+      usernameAcctLbl.setText("Username:");
+
+      passwordAcctLbl.setText("Password:");
+
+      accountIdLbl.setText("Account ID:");
+
+      nameAcctLbl.setText("Name:");
+
+      nameAcctLbl1.setText("Guzmer");
+
+      usernameAcctLbl1.setText("guzmer123");
+
+      passwordAcctLbl1.setText("***********");
+
+      accountIdLbl1.setText("957860");
+
+      changeUsernameAcctButton.setText("Change Username");
+      changeUsernameAcctButton.setToolTipText("");
+
+      changeNameAcctButton1.setText("Change Name");
+
+      changePasswordAcctButton.setText("Change Password");
+      changePasswordAcctButton.setToolTipText("");
+
+      returnHomeAcctButton.setText("Return Home");
+
       javax.swing.GroupLayout panelAccountLayout = new javax.swing.GroupLayout(panelAccount);
       panelAccount.setLayout(panelAccountLayout);
       panelAccountLayout.setHorizontalGroup(
          panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAccountLayout.createSequentialGroup()
+            .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+               .addGroup(panelAccountLayout.createSequentialGroup()
+                  .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                  .addComponent(changeNameAcctButton1))
+               .addGroup(panelAccountLayout.createSequentialGroup()
+                  .addGap(19, 19, 19)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(guzmerAcctImg)
+                     .addGroup(panelAccountLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(changeImgButton))
+                     .addComponent(returnHomeAcctButton))
+                  .addGap(18, 18, 18)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(nameAcctLbl)
+                     .addComponent(usernameAcctLbl)
+                     .addComponent(passwordAcctLbl)
+                     .addComponent(accountIdLbl))
+                  .addGap(26, 26, 26)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(usernameAcctLbl1)
+                     .addComponent(accountIdLbl1)
+                     .addComponent(passwordAcctLbl1)
+                     .addComponent(nameAcctLbl1))
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(changeUsernameAcctButton)
+                     .addComponent(changePasswordAcctButton))))
+            .addGap(92, 92, 92))
       );
       panelAccountLayout.setVerticalGroup(
          panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 454, Short.MAX_VALUE)
+         .addGroup(panelAccountLayout.createSequentialGroup()
+            .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(panelAccountLayout.createSequentialGroup()
+                  .addGap(24, 24, 24)
+                  .addComponent(guzmerAcctImg)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                  .addComponent(changeImgButton))
+               .addGroup(panelAccountLayout.createSequentialGroup()
+                  .addGap(38, 38, 38)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(nameAcctLbl)
+                     .addComponent(nameAcctLbl1)
+                     .addComponent(changeNameAcctButton1))
+                  .addGap(23, 23, 23)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(usernameAcctLbl)
+                     .addComponent(usernameAcctLbl1)
+                     .addComponent(changeUsernameAcctButton))
+                  .addGap(18, 18, 18)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(passwordAcctLbl)
+                     .addComponent(passwordAcctLbl1)
+                     .addComponent(changePasswordAcctButton))
+                  .addGap(18, 18, 18)
+                  .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(accountIdLbl)
+                     .addComponent(accountIdLbl1))))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+            .addComponent(returnHomeAcctButton)
+            .addGap(14, 14, 14))
       );
 
       tabMain.addTab("Account ", new javax.swing.ImageIcon(getClass().getResource("/material-icons_3-0-1_account-box_16_0_000000_none.png")), panelAccount); // NOI18N
@@ -186,6 +318,11 @@ public class UIMain extends javax.swing.JFrame
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
+
+   private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginButtonActionPerformed
+   {//GEN-HEADEREND:event_loginButtonActionPerformed
+      // TODO add your handling code here:
+   }//GEN-LAST:event_loginButtonActionPerformed
 
    /**
     @param args the command line arguments
@@ -237,17 +374,34 @@ public class UIMain extends javax.swing.JFrame
    }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private javax.swing.JLabel accountIdLbl;
+   private javax.swing.JLabel accountIdLbl1;
+   private javax.swing.JButton changeImgButton;
+   private javax.swing.JButton changeNameAcctButton1;
+   private javax.swing.JButton changePasswordAcctButton;
+   private javax.swing.JButton changeUsernameAcctButton;
+   private javax.swing.JButton createAcctButton;
+   private javax.swing.JLabel guzmerAcctImg;
+   private javax.swing.JLabel homeLogoImg;
    private javax.swing.JLabel jLabel2;
+   private javax.swing.JButton loginButton;
    private javax.swing.JLabel logoImg;
+   private javax.swing.JLabel nameAcctLbl;
+   private javax.swing.JLabel nameAcctLbl1;
    private javax.swing.JPanel panelAccount;
    private javax.swing.JPanel panelBrowse;
    private javax.swing.JPanel panelCart;
    private javax.swing.JPanel panelHome;
    private javax.swing.JPanel panelLogin;
    private javax.swing.JPanel panelNotifications;
+   private javax.swing.JLabel passwordAcctLbl;
+   private javax.swing.JLabel passwordAcctLbl1;
    private javax.swing.JLabel passwordLbl;
    private javax.swing.JTextField passwordTxtFld;
+   private javax.swing.JButton returnHomeAcctButton;
    private javax.swing.JTabbedPane tabMain;
+   private javax.swing.JLabel usernameAcctLbl;
+   private javax.swing.JLabel usernameAcctLbl1;
    private javax.swing.JLabel usernameLbl;
    private javax.swing.JTextField usernameTxtFld;
    // End of variables declaration//GEN-END:variables
