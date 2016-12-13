@@ -41,6 +41,19 @@ public class UIMain extends javax.swing.JFrame
       panelBrowse = new javax.swing.JPanel();
       panelAccount = new javax.swing.JPanel();
       panelCart = new javax.swing.JPanel();
+      jScrollPane1 = new javax.swing.JScrollPane();
+      jList1 = new javax.swing.JList<>();
+      jLabel1 = new javax.swing.JLabel();
+      jLabel3 = new javax.swing.JLabel();
+      jScrollPane2 = new javax.swing.JScrollPane();
+      jList2 = new javax.swing.JList<>();
+      jScrollPane3 = new javax.swing.JScrollPane();
+      jList3 = new javax.swing.JList<>();
+      jLabel4 = new javax.swing.JLabel();
+      jLabel5 = new javax.swing.JLabel();
+      jButton2 = new javax.swing.JButton();
+      jButton1 = new javax.swing.JButton();
+      jButton4 = new javax.swing.JButton();
       panelNotifications = new javax.swing.JPanel();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,7 +96,7 @@ public class UIMain extends javax.swing.JFrame
                   .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                      .addComponent(usernameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                      .addComponent(passwordTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                  .addGap(0, 151, Short.MAX_VALUE))))
+                  .addGap(0, 157, Short.MAX_VALUE))))
       );
       panelLoginLayout.setVerticalGroup(
          panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,7 +125,7 @@ public class UIMain extends javax.swing.JFrame
       panelHome.setLayout(panelHomeLayout);
       panelHomeLayout.setHorizontalGroup(
          panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGap(0, 644, Short.MAX_VALUE)
       );
       panelHomeLayout.setVerticalGroup(
          panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +138,7 @@ public class UIMain extends javax.swing.JFrame
       panelBrowse.setLayout(panelBrowseLayout);
       panelBrowseLayout.setHorizontalGroup(
          panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGap(0, 644, Short.MAX_VALUE)
       );
       panelBrowseLayout.setVerticalGroup(
          panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +151,7 @@ public class UIMain extends javax.swing.JFrame
       panelAccount.setLayout(panelAccountLayout);
       panelAccountLayout.setHorizontalGroup(
          panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGap(0, 644, Short.MAX_VALUE)
       );
       panelAccountLayout.setVerticalGroup(
          panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,15 +160,95 @@ public class UIMain extends javax.swing.JFrame
 
       tabMain.addTab("Account ", new javax.swing.ImageIcon(getClass().getResource("/material-icons_3-0-1_account-box_16_0_000000_none.png")), panelAccount); // NOI18N
 
+      jList1.setModel(new javax.swing.AbstractListModel<String>()
+      {
+         String[] strings = { "$5.99", "$5.99", "$5.99", "$5.99", "$5.99" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      jScrollPane1.setViewportView(jList1);
+
+      jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+      jLabel1.setText("Cart");
+
+      jLabel3.setText("Title");
+
+      jList2.setModel(new javax.swing.AbstractListModel<String>()
+      {
+         String[] strings = { "1", "1", "1", "1", "2" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      jScrollPane2.setViewportView(jList2);
+
+      jList3.setModel(new javax.swing.AbstractListModel<String>()
+      {
+         String[] strings = { "Finding Dory", "Captain America: Civil War", "Star Trek Beyond", "The BFG", "The Secret Life of Pets" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      jScrollPane3.setViewportView(jList3);
+
+      jLabel4.setText("Price");
+
+      jLabel5.setText("Quantity");
+
+      jButton2.setText("Remove Item");
+
+      jButton1.setText("Edit Quantity");
+
+      jButton4.setText("Checkout");
+
       javax.swing.GroupLayout panelCartLayout = new javax.swing.GroupLayout(panelCart);
       panelCart.setLayout(panelCartLayout);
       panelCartLayout.setHorizontalGroup(
          panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCartLayout.createSequentialGroup()
+            .addContainerGap(12, Short.MAX_VALUE)
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(jLabel1)
+               .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                  .addGroup(panelCartLayout.createSequentialGroup()
+                     .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3))
+                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                     .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4))
+                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                     .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel5)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                  .addGroup(panelCartLayout.createSequentialGroup()
+                     .addComponent(jButton2)
+                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                     .addComponent(jButton1)
+                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                     .addComponent(jButton4))))
+            .addContainerGap())
       );
       panelCartLayout.setVerticalGroup(
          panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 454, Short.MAX_VALUE)
+         .addGroup(panelCartLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel1)
+            .addGap(32, 32, 32)
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(jLabel3)
+               .addComponent(jLabel4)
+               .addComponent(jLabel5))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+               .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+               .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+               .addComponent(jScrollPane1))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(jButton2)
+               .addComponent(jButton1)
+               .addComponent(jButton4))
+            .addContainerGap(66, Short.MAX_VALUE))
       );
 
       tabMain.addTab("Cart", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_shopping-cart_16_0_000000_none.png")), panelCart, ""); // NOI18N
@@ -164,7 +257,7 @@ public class UIMain extends javax.swing.JFrame
       panelNotifications.setLayout(panelNotificationsLayout);
       panelNotificationsLayout.setHorizontalGroup(
          panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGap(0, 644, Short.MAX_VALUE)
       );
       panelNotificationsLayout.setVerticalGroup(
          panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,7 +330,20 @@ public class UIMain extends javax.swing.JFrame
    }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
+   private javax.swing.JButton jButton1;
+   private javax.swing.JButton jButton2;
+   private javax.swing.JButton jButton4;
+   private javax.swing.JLabel jLabel1;
    private javax.swing.JLabel jLabel2;
+   private javax.swing.JLabel jLabel3;
+   private javax.swing.JLabel jLabel4;
+   private javax.swing.JLabel jLabel5;
+   private javax.swing.JList<String> jList1;
+   private javax.swing.JList<String> jList2;
+   private javax.swing.JList<String> jList3;
+   private javax.swing.JScrollPane jScrollPane1;
+   private javax.swing.JScrollPane jScrollPane2;
+   private javax.swing.JScrollPane jScrollPane3;
    private javax.swing.JLabel logoImg;
    private javax.swing.JPanel panelAccount;
    private javax.swing.JPanel panelBrowse;
