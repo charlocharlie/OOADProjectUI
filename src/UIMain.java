@@ -29,13 +29,13 @@ public class UIMain extends javax.swing.JFrame
    private void initComponents()
    {
 
-      tabContainer = new javax.swing.JTabbedPane();
-      tabLogin = new javax.swing.JTabbedPane();
-      tabHome = new javax.swing.JTabbedPane();
-      tabBrowse = new javax.swing.JTabbedPane();
-      tabAccount = new javax.swing.JTabbedPane();
-      tabCart = new javax.swing.JTabbedPane();
-      tabNotifications = new javax.swing.JTabbedPane();
+      tabMain = new javax.swing.JTabbedPane();
+      panelLogin = new javax.swing.JPanel();
+      panelHome = new javax.swing.JPanel();
+      panelBrowse = new javax.swing.JPanel();
+      panelAccount = new javax.swing.JPanel();
+      panelCart = new javax.swing.JPanel();
+      panelNotifications = new javax.swing.JPanel();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
       setTitle("Movie Rental System");
@@ -44,37 +44,97 @@ public class UIMain extends javax.swing.JFrame
       setMinimumSize(new java.awt.Dimension(640, 480));
       setName("frameMain"); // NOI18N
 
-      tabContainer.setBackground(new java.awt.Color(255, 255, 255));
-      tabContainer.setName("mainTab"); // NOI18N
-      tabContainer.addTab("Login", tabLogin);
+      tabMain.setBackground(new java.awt.Color(255, 255, 255));
+      tabMain.setName("mainTab"); // NOI18N
 
-      tabHome.setBackground(new java.awt.Color(255, 255, 255));
-      tabContainer.addTab("Home ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_home_64_0_000000_none.png")), tabHome); // NOI18N
+      javax.swing.GroupLayout panelLoginLayout = new javax.swing.GroupLayout(panelLogin);
+      panelLogin.setLayout(panelLoginLayout);
+      panelLoginLayout.setHorizontalGroup(
+         panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 638, Short.MAX_VALUE)
+      );
+      panelLoginLayout.setVerticalGroup(
+         panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 454, Short.MAX_VALUE)
+      );
 
-      tabBrowse.setBackground(new java.awt.Color(255, 255, 255));
-      tabContainer.addTab("Browse ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_list-ul_16_0_000000_none.png")), tabBrowse); // NOI18N
+      tabMain.addTab("Login", panelLogin);
 
-      tabAccount.setBackground(new java.awt.Color(255, 255, 255));
-      tabContainer.addTab("Account ", new javax.swing.ImageIcon(getClass().getResource("/material-icons_3-0-1_account-box_16_0_000000_none.png")), tabAccount); // NOI18N
+      javax.swing.GroupLayout panelHomeLayout = new javax.swing.GroupLayout(panelHome);
+      panelHome.setLayout(panelHomeLayout);
+      panelHomeLayout.setHorizontalGroup(
+         panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 638, Short.MAX_VALUE)
+      );
+      panelHomeLayout.setVerticalGroup(
+         panelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 454, Short.MAX_VALUE)
+      );
 
-      tabCart.setBackground(new java.awt.Color(255, 255, 255));
-      tabContainer.addTab("Cart ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_shopping-cart_16_0_000000_none.png")), tabCart); // NOI18N
-      tabCart.getAccessibleContext().setAccessibleDescription("");
+      tabMain.addTab("Home ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_home_64_0_000000_none.png")), panelHome); // NOI18N
 
-      tabContainer.addTab("Notifications ", new javax.swing.ImageIcon(getClass().getResource("/ionicons_2-0-1_android-notifications_16_0_000000_none.png")), tabNotifications); // NOI18N
+      javax.swing.GroupLayout panelBrowseLayout = new javax.swing.GroupLayout(panelBrowse);
+      panelBrowse.setLayout(panelBrowseLayout);
+      panelBrowseLayout.setHorizontalGroup(
+         panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 638, Short.MAX_VALUE)
+      );
+      panelBrowseLayout.setVerticalGroup(
+         panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 454, Short.MAX_VALUE)
+      );
+
+      tabMain.addTab("Browse ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_list-ul_16_0_000000_none.png")), panelBrowse); // NOI18N
+
+      javax.swing.GroupLayout panelAccountLayout = new javax.swing.GroupLayout(panelAccount);
+      panelAccount.setLayout(panelAccountLayout);
+      panelAccountLayout.setHorizontalGroup(
+         panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 638, Short.MAX_VALUE)
+      );
+      panelAccountLayout.setVerticalGroup(
+         panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 454, Short.MAX_VALUE)
+      );
+
+      tabMain.addTab("Account ", new javax.swing.ImageIcon(getClass().getResource("/material-icons_3-0-1_account-box_16_0_000000_none.png")), panelAccount); // NOI18N
+
+      javax.swing.GroupLayout panelCartLayout = new javax.swing.GroupLayout(panelCart);
+      panelCart.setLayout(panelCartLayout);
+      panelCartLayout.setHorizontalGroup(
+         panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 638, Short.MAX_VALUE)
+      );
+      panelCartLayout.setVerticalGroup(
+         panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 454, Short.MAX_VALUE)
+      );
+
+      tabMain.addTab("Cart", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_shopping-cart_16_0_000000_none.png")), panelCart, ""); // NOI18N
+
+      javax.swing.GroupLayout panelNotificationsLayout = new javax.swing.GroupLayout(panelNotifications);
+      panelNotifications.setLayout(panelNotificationsLayout);
+      panelNotificationsLayout.setHorizontalGroup(
+         panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 638, Short.MAX_VALUE)
+      );
+      panelNotificationsLayout.setVerticalGroup(
+         panelNotificationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+         .addGap(0, 454, Short.MAX_VALUE)
+      );
+
+      tabMain.addTab("Notifications", new javax.swing.ImageIcon(getClass().getResource("/ionicons_2-0-1_android-notifications_16_0_000000_none.png")), panelNotifications); // NOI18N
 
       javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
       getContentPane().setLayout(layout);
       layout.setHorizontalGroup(
          layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addComponent(tabContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
+         .addComponent(tabMain)
       );
       layout.setVerticalGroup(
          layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addComponent(tabContainer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+         .addComponent(tabMain, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
       );
-
-      tabContainer.getAccessibleContext().setAccessibleDescription("");
 
       pack();
    }// </editor-fold>//GEN-END:initComponents
@@ -129,12 +189,12 @@ public class UIMain extends javax.swing.JFrame
    }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
-   private javax.swing.JTabbedPane tabAccount;
-   private javax.swing.JTabbedPane tabBrowse;
-   private javax.swing.JTabbedPane tabCart;
-   private javax.swing.JTabbedPane tabContainer;
-   private javax.swing.JTabbedPane tabHome;
-   private javax.swing.JTabbedPane tabLogin;
-   private javax.swing.JTabbedPane tabNotifications;
+   private javax.swing.JPanel panelAccount;
+   private javax.swing.JPanel panelBrowse;
+   private javax.swing.JPanel panelCart;
+   private javax.swing.JPanel panelHome;
+   private javax.swing.JPanel panelLogin;
+   private javax.swing.JPanel panelNotifications;
+   private javax.swing.JTabbedPane tabMain;
    // End of variables declaration//GEN-END:variables
 }
