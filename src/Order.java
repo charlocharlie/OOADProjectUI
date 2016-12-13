@@ -17,7 +17,7 @@ public class Order
 {
    
    private Item items[];
-   private Date curDate;
+   private Date date;
    
    /**
    This constructor...

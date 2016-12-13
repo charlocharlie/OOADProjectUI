@@ -27,5 +27,10 @@ public class Item
    {
       
    }
+   
+   public void notifyForPickup()
+   {
+      
+   }
 
 }

@@ -12,28 +12,13 @@ import java.io.*;
  @author Jake Ira
  @author Tyler Hutchison
  */
-public class Clerk extends User
+public class BalanceManager
 {
    
-   private float payRate;
    
-   /**
-   This constructor...
-   */
-   public Clerk ()
-   {
-      //super(...);
-      
-   }
    
-   public void checkOut()
+   public void updateBalance()
    {
       
    }
-   
-   public void markRetrieved()
-   {
-      
-   }
-
 }

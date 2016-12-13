@@ -28,5 +28,20 @@ public class Customer extends User
       //super (...);
       
    }
+   
+   public void placeOrder()
+   {
+      
+   }
+   
+   public void addToCart()
+   {
+      
+   }
+   
+   public void payBalance()
+   {
+      
+   }
 
 }

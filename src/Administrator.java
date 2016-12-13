@@ -24,5 +24,15 @@ public class Administrator extends User
    {
       //super(...);
    }
+   
+   public void addItem()
+   {
+      
+   }
+   
+   public void removeItem()
+   {
+      
+   }
 
 }
