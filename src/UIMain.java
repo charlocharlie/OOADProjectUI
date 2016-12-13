@@ -36,9 +36,9 @@ public class UIMain extends javax.swing.JFrame
       logoImg = new javax.swing.JLabel();
       passwordLbl = new javax.swing.JLabel();
       usernameTxtFld = new javax.swing.JTextField();
-      passwordTxtFld = new javax.swing.JTextField();
       createAcctButton = new javax.swing.JButton();
       loginButton = new javax.swing.JButton();
+      jPasswordField1 = new javax.swing.JPasswordField();
       panelHome = new javax.swing.JPanel();
       homeLogoImg = new javax.swing.JLabel();
       jLabel6 = new javax.swing.JLabel();
@@ -145,15 +145,14 @@ public class UIMain extends javax.swing.JFrame
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(panelLoginLayout.createSequentialGroup()
                   .addComponent(logoImg)
-                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 252, Short.MAX_VALUE)
                   .addComponent(jLabel2))
                .addGroup(panelLoginLayout.createSequentialGroup()
-                  .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                  .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                      .addComponent(loginButton)
-                     .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(usernameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(passwordTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                  .addGap(0, 146, Short.MAX_VALUE))))
+                     .addComponent(usernameTxtFld, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
+                     .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.LEADING))
+                  .addGap(0, 0, Short.MAX_VALUE))))
       );
       panelLoginLayout.setVerticalGroup(
          panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,8 +172,8 @@ public class UIMain extends javax.swing.JFrame
             .addGap(18, 18, 18)
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(passwordLbl)
-               .addComponent(passwordTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(32, 32, 32)
+               .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(33, 33, 33)
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                .addComponent(createAcctButton)
                .addComponent(loginButton))
@@ -586,6 +585,13 @@ public class UIMain extends javax.swing.JFrame
       jScrollPane7.setViewportView(jList6);
 
       jButton5.setText("Clear Selected");
+      jButton5.addActionListener(new java.awt.event.ActionListener()
+      {
+         public void actionPerformed(java.awt.event.ActionEvent evt)
+         {
+            jButton5ActionPerformed(evt);
+         }
+      });
 
       jButton6.setText("Clear All");
       jButton6.addActionListener(new java.awt.event.ActionListener()
@@ -659,6 +665,11 @@ public class UIMain extends javax.swing.JFrame
       jList6.removeAll();
       jList6.updateUI();
    }//GEN-LAST:event_jButton6ActionPerformed
+
+   private void jButton5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton5ActionPerformed
+   {//GEN-HEADEREND:event_jButton5ActionPerformed
+
+   }//GEN-LAST:event_jButton5ActionPerformed
 
    /**
     @param args the command line arguments
@@ -744,6 +755,7 @@ public class UIMain extends javax.swing.JFrame
    private javax.swing.JList<String> jList4;
    private javax.swing.JList<String> jList5;
    private javax.swing.JList<String> jList6;
+   private javax.swing.JPasswordField jPasswordField1;
    private javax.swing.JScrollPane jScrollPane1;
    private javax.swing.JScrollPane jScrollPane2;
    private javax.swing.JScrollPane jScrollPane3;
@@ -765,7 +777,6 @@ public class UIMain extends javax.swing.JFrame
    private javax.swing.JLabel passwordAcctLbl;
    private javax.swing.JLabel passwordAcctLbl1;
    private javax.swing.JLabel passwordLbl;
-   private javax.swing.JTextField passwordTxtFld;
    private javax.swing.JLabel priceBrowseLbl1;
    private javax.swing.JLabel priceBrowseLbl2;
    private javax.swing.JLabel priceBrowseLbl3;
