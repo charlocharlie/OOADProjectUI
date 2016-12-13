@@ -42,6 +42,15 @@ public class UIMain extends javax.swing.JFrame
       panelHome = new javax.swing.JPanel();
       homeLogoImg = new javax.swing.JLabel();
       panelBrowse = new javax.swing.JPanel();
+      headerBrowseLbl = new javax.swing.JLabel();
+      findingDoryImg = new javax.swing.JLabel();
+      secretLifePetImg = new javax.swing.JLabel();
+      starTrekImg = new javax.swing.JLabel();
+      priceBrowseLbl1 = new javax.swing.JLabel();
+      priceBrowseLbl2 = new javax.swing.JLabel();
+      priceBrowseLbl3 = new javax.swing.JLabel();
+      scrollBarBrowse = new javax.swing.JScrollBar();
+      returnHomeBrowseButton = new javax.swing.JButton();
       panelAccount = new javax.swing.JPanel();
       guzmerAcctImg = new javax.swing.JLabel();
       changeImgButton = new javax.swing.JButton();
@@ -57,6 +66,7 @@ public class UIMain extends javax.swing.JFrame
       changeNameAcctButton1 = new javax.swing.JButton();
       changePasswordAcctButton = new javax.swing.JButton();
       returnHomeAcctButton = new javax.swing.JButton();
+      headerAcctLbl = new javax.swing.JLabel();
       panelCart = new javax.swing.JPanel();
       panelNotifications = new javax.swing.JPanel();
 
@@ -165,15 +175,80 @@ public class UIMain extends javax.swing.JFrame
 
       tabMain.addTab("Home ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_home_64_0_000000_none.png")), panelHome); // NOI18N
 
+      headerBrowseLbl.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+      headerBrowseLbl.setText("Browse Movies");
+
+      findingDoryImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/findingDory.png"))); // NOI18N
+
+      secretLifePetImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/secretPets.png"))); // NOI18N
+
+      starTrekImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/starTrek.png"))); // NOI18N
+
+      priceBrowseLbl1.setText("$5.99");
+
+      priceBrowseLbl2.setText("$5.99");
+
+      priceBrowseLbl3.setText("$5.99");
+
+      scrollBarBrowse.setBackground(new java.awt.Color(255, 204, 51));
+      scrollBarBrowse.setForeground(new java.awt.Color(204, 255, 255));
+
+      returnHomeBrowseButton.setText("Return Home");
+
       javax.swing.GroupLayout panelBrowseLayout = new javax.swing.GroupLayout(panelBrowse);
       panelBrowse.setLayout(panelBrowseLayout);
       panelBrowseLayout.setHorizontalGroup(
          panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGroup(panelBrowseLayout.createSequentialGroup()
+            .addGroup(panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(panelBrowseLayout.createSequentialGroup()
+                  .addGap(19, 19, 19)
+                  .addGroup(panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(panelBrowseLayout.createSequentialGroup()
+                        .addComponent(findingDoryImg)
+                        .addGap(34, 34, 34)
+                        .addComponent(secretLifePetImg)
+                        .addGap(34, 34, 34)
+                        .addComponent(starTrekImg))
+                     .addComponent(headerBrowseLbl)))
+               .addGroup(panelBrowseLayout.createSequentialGroup()
+                  .addGap(74, 74, 74)
+                  .addComponent(priceBrowseLbl1)
+                  .addGap(156, 156, 156)
+                  .addComponent(priceBrowseLbl2)
+                  .addGap(158, 158, 158)
+                  .addComponent(priceBrowseLbl3)))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+            .addComponent(scrollBarBrowse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(55, 55, 55))
+         .addGroup(panelBrowseLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(returnHomeBrowseButton)
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
       );
       panelBrowseLayout.setVerticalGroup(
          panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 454, Short.MAX_VALUE)
+         .addGroup(panelBrowseLayout.createSequentialGroup()
+            .addGap(21, 21, 21)
+            .addGroup(panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+               .addComponent(secretLifePetImg)
+               .addGroup(panelBrowseLayout.createSequentialGroup()
+                  .addComponent(headerBrowseLbl)
+                  .addGap(34, 34, 34)
+                  .addComponent(findingDoryImg))
+               .addComponent(starTrekImg))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addGroup(panelBrowseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(priceBrowseLbl1)
+               .addComponent(priceBrowseLbl2)
+               .addComponent(priceBrowseLbl3))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(returnHomeBrowseButton)
+            .addContainerGap())
+         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBrowseLayout.createSequentialGroup()
+            .addContainerGap(79, Short.MAX_VALUE)
+            .addComponent(scrollBarBrowse, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(109, 109, 109))
       );
 
       tabMain.addTab("Browse ", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_list-ul_16_0_000000_none.png")), panelBrowse); // NOI18N
@@ -208,6 +283,9 @@ public class UIMain extends javax.swing.JFrame
 
       returnHomeAcctButton.setText("Return Home");
 
+      headerAcctLbl.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+      headerAcctLbl.setText("My Account");
+
       javax.swing.GroupLayout panelAccountLayout = new javax.swing.GroupLayout(panelAccount);
       panelAccount.setLayout(panelAccountLayout);
       panelAccountLayout.setHorizontalGroup(
@@ -224,7 +302,8 @@ public class UIMain extends javax.swing.JFrame
                      .addGroup(panelAccountLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(changeImgButton))
-                     .addComponent(returnHomeAcctButton))
+                     .addComponent(returnHomeAcctButton)
+                     .addComponent(headerAcctLbl))
                   .addGap(18, 18, 18)
                   .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                      .addComponent(nameAcctLbl)
@@ -246,14 +325,16 @@ public class UIMain extends javax.swing.JFrame
       panelAccountLayout.setVerticalGroup(
          panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(panelAccountLayout.createSequentialGroup()
+            .addGap(20, 20, 20)
+            .addComponent(headerAcctLbl)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
             .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                .addGroup(panelAccountLayout.createSequentialGroup()
-                  .addGap(24, 24, 24)
                   .addComponent(guzmerAcctImg)
                   .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                   .addComponent(changeImgButton))
                .addGroup(panelAccountLayout.createSequentialGroup()
-                  .addGap(38, 38, 38)
+                  .addGap(14, 14, 14)
                   .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                      .addComponent(nameAcctLbl)
                      .addComponent(nameAcctLbl1)
@@ -272,7 +353,7 @@ public class UIMain extends javax.swing.JFrame
                   .addGroup(panelAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                      .addComponent(accountIdLbl)
                      .addComponent(accountIdLbl1))))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+            .addGap(106, 106, 106)
             .addComponent(returnHomeAcctButton)
             .addGap(14, 14, 14))
       );
@@ -381,7 +462,10 @@ public class UIMain extends javax.swing.JFrame
    private javax.swing.JButton changePasswordAcctButton;
    private javax.swing.JButton changeUsernameAcctButton;
    private javax.swing.JButton createAcctButton;
+   private javax.swing.JLabel findingDoryImg;
    private javax.swing.JLabel guzmerAcctImg;
+   private javax.swing.JLabel headerAcctLbl;
+   private javax.swing.JLabel headerBrowseLbl;
    private javax.swing.JLabel homeLogoImg;
    private javax.swing.JLabel jLabel2;
    private javax.swing.JButton loginButton;
@@ -398,7 +482,14 @@ public class UIMain extends javax.swing.JFrame
    private javax.swing.JLabel passwordAcctLbl1;
    private javax.swing.JLabel passwordLbl;
    private javax.swing.JTextField passwordTxtFld;
+   private javax.swing.JLabel priceBrowseLbl1;
+   private javax.swing.JLabel priceBrowseLbl2;
+   private javax.swing.JLabel priceBrowseLbl3;
    private javax.swing.JButton returnHomeAcctButton;
+   private javax.swing.JButton returnHomeBrowseButton;
+   private javax.swing.JScrollBar scrollBarBrowse;
+   private javax.swing.JLabel secretLifePetImg;
+   private javax.swing.JLabel starTrekImg;
    private javax.swing.JTabbedPane tabMain;
    private javax.swing.JLabel usernameAcctLbl;
    private javax.swing.JLabel usernameAcctLbl1;
