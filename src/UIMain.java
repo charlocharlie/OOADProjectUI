@@ -68,6 +68,19 @@ public class UIMain extends javax.swing.JFrame
       returnHomeAcctButton = new javax.swing.JButton();
       headerAcctLbl = new javax.swing.JLabel();
       panelCart = new javax.swing.JPanel();
+      jLabel1 = new javax.swing.JLabel();
+      jScrollPane1 = new javax.swing.JScrollPane();
+      jList1 = new javax.swing.JList<>();
+      jScrollPane2 = new javax.swing.JScrollPane();
+      jList2 = new javax.swing.JList<>();
+      jScrollPane3 = new javax.swing.JScrollPane();
+      jList3 = new javax.swing.JList<>();
+      jLabel3 = new javax.swing.JLabel();
+      jLabel4 = new javax.swing.JLabel();
+      jLabel5 = new javax.swing.JLabel();
+      jButton1 = new javax.swing.JButton();
+      jButton2 = new javax.swing.JButton();
+      jButton3 = new javax.swing.JButton();
       panelNotifications = new javax.swing.JPanel();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -360,15 +373,97 @@ public class UIMain extends javax.swing.JFrame
 
       tabMain.addTab("Account ", new javax.swing.ImageIcon(getClass().getResource("/material-icons_3-0-1_account-box_16_0_000000_none.png")), panelAccount); // NOI18N
 
+      jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+      jLabel1.setText("Cart");
+
+      jList1.setModel(new javax.swing.AbstractListModel<String>()
+      {
+         String[] strings = { "Finding Dory", "Star Trek Beyond", "The Secret Life of Pets", "Guardians of the Galaxy", "Snowden" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      jScrollPane1.setViewportView(jList1);
+
+      jList2.setModel(new javax.swing.AbstractListModel<String>()
+      {
+         String[] strings = { "$5.99", "$5.99", "$5.99", "$3.99", "$5.99" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      jScrollPane2.setViewportView(jList2);
+
+      jList3.setModel(new javax.swing.AbstractListModel<String>()
+      {
+         String[] strings = { "1", "1", "1", "1", "1" };
+         public int getSize() { return strings.length; }
+         public String getElementAt(int i) { return strings[i]; }
+      });
+      jScrollPane3.setViewportView(jList3);
+
+      jLabel3.setText("Title");
+
+      jLabel4.setText("Price/day");
+
+      jLabel5.setText("Quantity");
+
+      jButton1.setText("Edit Quantity");
+
+      jButton2.setText("Remove Item");
+
+      jButton3.setText("Checkout");
+
       javax.swing.GroupLayout panelCartLayout = new javax.swing.GroupLayout(panelCart);
       panelCart.setLayout(panelCartLayout);
       panelCartLayout.setHorizontalGroup(
          panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 638, Short.MAX_VALUE)
+         .addGroup(panelCartLayout.createSequentialGroup()
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addGroup(panelCartLayout.createSequentialGroup()
+                  .addContainerGap()
+                  .addComponent(jLabel1))
+               .addGroup(panelCartLayout.createSequentialGroup()
+                  .addGap(14, 14, 14)
+                  .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                     .addComponent(jButton3)
+                     .addGroup(panelCartLayout.createSequentialGroup()
+                        .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                           .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                           .addComponent(jLabel3)
+                           .addGroup(panelCartLayout.createSequentialGroup()
+                              .addComponent(jButton1)
+                              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                              .addComponent(jButton2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                           .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                           .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                           .addComponent(jLabel5)
+                           .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+            .addContainerGap(14, Short.MAX_VALUE))
       );
       panelCartLayout.setVerticalGroup(
          panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         .addGap(0, 454, Short.MAX_VALUE)
+         .addGroup(panelCartLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel1)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+               .addComponent(jLabel3)
+               .addComponent(jLabel4)
+               .addComponent(jLabel5))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+               .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
+               .addComponent(jScrollPane2)
+               .addComponent(jScrollPane3))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(panelCartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+               .addComponent(jButton1)
+               .addComponent(jButton2)
+               .addComponent(jButton3))
+            .addGap(32, 32, 32))
       );
 
       tabMain.addTab("Cart", new javax.swing.ImageIcon(getClass().getResource("/font-awesome_4-7-0_shopping-cart_16_0_000000_none.png")), panelCart, ""); // NOI18N
@@ -467,7 +562,20 @@ public class UIMain extends javax.swing.JFrame
    private javax.swing.JLabel headerAcctLbl;
    private javax.swing.JLabel headerBrowseLbl;
    private javax.swing.JLabel homeLogoImg;
+   private javax.swing.JButton jButton1;
+   private javax.swing.JButton jButton2;
+   private javax.swing.JButton jButton3;
+   private javax.swing.JLabel jLabel1;
    private javax.swing.JLabel jLabel2;
+   private javax.swing.JLabel jLabel3;
+   private javax.swing.JLabel jLabel4;
+   private javax.swing.JLabel jLabel5;
+   private javax.swing.JList<String> jList1;
+   private javax.swing.JList<String> jList2;
+   private javax.swing.JList<String> jList3;
+   private javax.swing.JScrollPane jScrollPane1;
+   private javax.swing.JScrollPane jScrollPane2;
+   private javax.swing.JScrollPane jScrollPane3;
    private javax.swing.JButton loginButton;
    private javax.swing.JLabel logoImg;
    private javax.swing.JLabel nameAcctLbl;
